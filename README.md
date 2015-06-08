@@ -18,7 +18,7 @@
     rm .git/* -rf
     git init
     git add .
-    mkdir private/
+    mkdir subtreedir/
     git commit -m 'first commit'
     git remote add origin git@bitbucket.org:davidbradway/testrepo.git
     git push -u origin --all # pushes up the repo and its refs for the first time
@@ -27,8 +27,8 @@
     # Merge subtree to subdir
     git remote add -f subproj git@bitbucket.org:davidbradway/testrepoprivate.git
     git merge -s ours --no-commit subproj/master
-    git read-tree --prefix=private/ -u subproj/master
-    git commit -m "Merge subproj as our subdir called private"
+    git read-tree --prefix=subtreedir/ -u subproj/master
+    git commit -m "Merge subproject repo as our subdir called subtreedir"
 
     # Pull subtree changes
     git pull -s subtree subproj master
