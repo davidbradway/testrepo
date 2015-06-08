@@ -24,6 +24,7 @@
     git push -u origin --all # pushes up the repo and its refs for the first time
     git push -u origin --tags # pushes up any tags
         
+    # SUBTREE    
     # Merge subtree to subdir
     git remote add -f subproj git@bitbucket.org:davidbradway/testrepoprivate.git
     git merge -s ours --no-commit subproj/master
@@ -32,3 +33,6 @@
 
     # Pull subtree changes
     git pull -s subtree subproj master
+
+    # SUBMODULE
+    git submodule add git@bitbucket.org:davidbradway/testrepoprivate.git private
