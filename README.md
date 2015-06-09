@@ -53,6 +53,13 @@ Clone repo and submodules:
     git submodule init  
     git submodule update  
 
+Information about the Submodules are contained in:
+- .gitmodules
+- .git/config
+
+Information about the Subproj Remotes are contained in:
+- .git/config
+
 ## References
 1. First saw git subtree here: http://www.kitware.com/blog/home/post/899
 2. Trying this: https://www.kernel.org/pub/software/scm/git/docs/howto/using-merge-subtree.html
