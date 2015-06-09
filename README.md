@@ -26,8 +26,15 @@ Create the original structure of the base repo:
     # Pull subtree changes  
     git pull -s subtree subproj master  
   
-    # SUBMODULE - links subrepo as submodule  
+    # SUBMODULE - 
+    # link private, online subrepo as submodule  
     git submodule add git@bitbucket.org:davidbradway/testrepoprivate.git private  
+    # link private, local subrepo as submodule  
+    git submodule add /c/Users/dpb6/Doucments/Github/localprivate/.git/ localprivatedir  
+    git add .  
+    git commit -m 'add submodules'  
+    git push  
+
 
 Update code:
 
