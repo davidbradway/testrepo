@@ -2,16 +2,16 @@
 
 ## Discussion
 
-If this base repo is public (as it is in this case), and the subrepo is private and does contain 'secret' stuff, (also true) we should not use Subtree Merge.
-We should instead use a Git Submodule to keep it safe, private, and separate
+If this base repo is public (as it is in this case), and the subrepo is private and does contain 'secret' stuff (also true), we should not use Git Subtree Merge.
+We should instead use a Git Submodule to keep it safe, private, and separate.
 
-If the base repo was also private, we could use a Subtree Merge strategy to add the code into the private base repo.
+Instead, if the base repo was also private, we could use the Git Subtree Merge strategy to add the code into the base repo.
 
-If both repos are public, there may be advantages of each strategy: Subtree Merge allows easy inclusion while Submodule might be better for optional stuff.
+If both repos were public, there may be advantages of each strategy: Git Subtree Merge allows easy inclusion, while Git Submodule might be better for optional stuff.
 
-Both strategies are used in this repo as a demonstration of the right and wrong way to keep secret stuff private. 
-The subtreedir exposes our private subrepo secret stuff in public!
-The private submodule keeps our secret stuff safe.
+Both strategies are used in this repo as a demonstration of the right and wrong way to keep one's secret stuff private. 
+The Git Subtree Merge exposes our private subrepo secret stuff in public in the subtreedir directory!
+The Git Submodule method keeps our secret stuff safe in the private directory.
 
 ## Code
 
