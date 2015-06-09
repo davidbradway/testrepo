@@ -1,20 +1,21 @@
 # testrepo
 
-1. First saw git subtree here: http://www.kitware.com/blog/home/post/899
-2. Trying this: https://www.kernel.org/pub/software/scm/git/docs/howto/using-merge-subtree.html
-3. This explanation is very good: http://blog.joncairns.com/2011/10/how-to-use-git-submodules/
+## Discussion
 
-If this base repo is public (as it is in this case), and this subrepo is private and does contain 'secret' stuff, (also true) we should not use Subtree Merge.
-
+If this base repo is public (as it is in this case), and the subrepo is private and does contain 'secret' stuff, (also true) we should not use Subtree Merge.
 We should instead use a Git Submodule to keep it safe, private, and separate
 
 If the base repo was also private, we could use a Subtree Merge strategy to add the code into the private base repo.
 
 If both repos are public, there may be advantages of each strategy: Subtree Merge allows easy inclusion while Submodule might be better for optional stuff.
 
-Both strategies are demonstrated in this repo as a demonstration. Below is the code to create the structure of the repo:
+Both strategies are used in this repo as a demonstration of the right and wrong way to keep secret stuff private. 
+The subtreedir exposes our private subrepo secret stuff in public!
+The private submodule keeps our secret stuff safe.
 
-To set up the original structure:
+## Code
+
+Create the original structure of the base repo:
 
     # SUBTREE - merges subtree into repo  
     # Merge subtree to subdir  
@@ -51,3 +52,8 @@ Clone repo and submodules:
     # that does these for you:  
     git submodule init  
     git submodule update  
+
+## References
+1. First saw git subtree here: http://www.kitware.com/blog/home/post/899
+2. Trying this: https://www.kernel.org/pub/software/scm/git/docs/howto/using-merge-subtree.html
+3. This explanation is very good: http://blog.joncairns.com/2011/10/how-to-use-git-submodules/
